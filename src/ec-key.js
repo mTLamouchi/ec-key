@@ -400,7 +400,7 @@ ECKey.prototype.computeSecret = function computeSecret(key) {
 ECKey.prototype.createECDH = function createECDH() {
   if (this.isPrivateECKey) {
     var ecdh = crypto.createECDH(this.curve);
-    ecdh.setPublicKey(this.publicCodePoint);
+    ecdh.keys = ecdh.curve.keyFromPublic(this.publicCodePoint)
     ecdh.setPrivateKey(this.d);
 
     var ecdhComputeSecret = ecdh.computeSecret;

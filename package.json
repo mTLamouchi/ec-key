@@ -1,5 +1,5 @@
 {
-  "name": "ec-key",
+  "name": "ec-key-patch",
   "description": "Wrapper around an Elliptic Curve private or public keys",
   "version": "0.0.4",
   "main": "src/ec-key.js",
